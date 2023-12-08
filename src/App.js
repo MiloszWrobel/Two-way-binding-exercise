@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Review from "./Review";
 
+// don't change the Component name "App"
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <>
+      <section id="feedback">
+        <h2>Please share some feedback</h2>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <label>Your Feedback</label>
+          <textarea />
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <p>
+          <label>Your Name</label>
+          <input type="text" />
+        </p>
+      </section>
+      <section id="draft">
+        <h2>Your feedback</h2>
+
+        <Review />
+
+        <p>
+          <button>Save</button>
+        </p>
+      </section>
+    </>
   );
 }
 
